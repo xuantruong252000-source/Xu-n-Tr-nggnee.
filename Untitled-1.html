@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Xuân Trường Dev</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      background: #e0f7f5;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #20c997;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 10px 0;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    /* Nội dung chính */
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+      flex: 1;
+    }
+    .intro, .section {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    .intro {
+      background: #ffb6c1; /* nền hồng sen */
+      color: #0000ff;      /* chữ xanh dương */
+    }
+    .section {
+      display: none; /* Ẩn mặc định */
+    }
+    .section h2 {
+      color: #20c997;
+      border-bottom: 2px solid #20c997;
+      padding-bottom: 5px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .card {
+      width: 150px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 64px;
+      height: 64px;
+    }
+    .card a {
+      display: block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: #20c997;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Bên này cậu ơi</h2>
+    <ul>
+      <li><a onclick="showSection('intro')">Giới thiệu</a></li>
+      <li><a onclick="showSection('capcut')">Capcut Pro</a></li>
+      <li><a onclick="showSection('modules')">Shadowrocket Modules</a></li>
+    </ul>
+  </div>
+
+  <!-- Nội dung -->
+  <div class="content">
+    <!-- Intro -->
+    <div class="intro" id="intro">
+      <p>
+        <strong>
+          Cảm ơn cậu đã đến với chúng tôi, đây là trang web mô tả 1 vào ứng dụng bên it me.<br><br>
+          ( I don't English ) bro thông cảm, chúc bro ngày vui vẻ đầy năng lượng, và sử dụng ok nhóa,<br>
+          yêu bro lắm ❤️, cảm ơn bro ghé qua sử dụng nhó.
+        </strong>
+      </p>
+    </div>
+
+    <!-- Phần 1 -->
+    <div class="section" id="capcut">
+      <h2>Capcut Pro</h2>
+      <div class="container">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="iMazing Windows">
+          <a href="https://imazing.com/download-v2/windows">iMazing v2 Windows</a>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2/2235.png" alt="iMazing macOS">
+          <a href="https://imazing.com/download-v2/macos">iMazing v2 macOS</a>
+        </div>
+        <!-- Thêm Capcut -->
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/dc/74/6c/dc746c7673e821711c607cdcb9d90005.jpg" alt="Capcut">
+          <a href="https://drive.google.com/file/d/14YqFOuTcfUfR9oFEYPciBUYg1AuZ99Uj/view?usp=drivesdk">Capcut Pro</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phần 2 -->
+    <div class="section" id="modules">
+      <h2>Shadowrocket Modules</h2>
+      <div class="container">
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png" alt="YouTube">
+          <a href="shadowrocket://addModule?url=https://raw.githubusercontent.com/XuanTruonggnee/pro/main/YouTube%20premium.sgmodule">YouTube Premium</a>
+        </div>
+        <div class="card">
+          <img src="https://e7.pngegg.com/pngimages/158/744/png-clipart-emoji-smirk-wink-smiley-face.png" alt="Wink">
+          <a href="shadowrocket://addModule?url=https://raw.githubusercontent.com/XuanTruonggnee/pro/main/Wink%20Nee.sgmodule">Wink Nee</a>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Locket">
+          <a href="shadowrocket://addModule?url=https://raw.githubusercontent.com/XuanTruonggnee/pro/main/Locket%20Gold%F0%9F%8F%85.sgmodule">Locket Gold 🏅</a>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="Spotify">
+          <a href="shadowrocket://addModule?url=https://whatshub.top/module/spotifyVIP.module">Spotify VIP</a>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145809.png" alt="SoundCloud">
+          <a href="shadowrocket://addModule?url=https://whatshub.top/module/soundcloud.module">SoundCloud Go+</a>
+        </div>
+        <div class="card">
+          <img src="https://seeklogo.com/images/P/picsart-logo-1A6D0A6E4A-seeklogo.com.png" alt="Picsart">
+          <a href="shadowrocket://addModule?url=https://raw.githubusercontent.com/NightmarketServer/Shadowrocket-Module/refs/heads/main/Module/Picsart%20Premium.module">Picsart Premium</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      // Ẩn tất cả
+      document.querySelectorAll('.intro, .section').forEach(el => el.style.display = 'none');
+      // Hiện phần được chọn
+      document.getElementById(id).style.display = 'block';
+    }
+    // Mặc định hiển thị intro
+    showSection('intro');
+  </script>
+</body>
+</html>
